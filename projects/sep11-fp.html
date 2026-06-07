@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Deep dive into Abdel's IoT Smart Alarm Clock project">
+  <title>IoT Smart Alarm Clock | Abdel Ebed</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-dark text-light">
+
+  <!-- Minimal Sub-page Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top portfolio-nav">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="../index.html">← Back to Portfolio</a>
+    </div>
+  </nav>
+
+  <!-- Case Study Header -->
+  <header class="container pt-5 mt-5">
+    <div class="row pt-5 justify-content-center">
+      <div class="col-lg-9">
+        <span class="badge text-bg-primary mb-2">Embedded Systems & C++</span>
+        <h1 class="display-4 fw-bold mb-3">IoT Smart Alarm Clock</h1>
+        <p class="lead mb-4">
+          A standalone, internet-connected hardware application built from the ground up to aggregate utility metrics
+          cleanly without external application dependencies.
+        </p>
+        <hr class="border-secondary my-5">
+      </div>
+    </div>
+  </header>
+
+  <!-- Case Study Content -->
+  <main class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <!-- Section 1: Project Overview -->
+        <section class="mb-5">
+          <h2 class="h3 fw-bold mb-3 text-primary">Project Overview</h2>
+          <p>
+            The goal of this project was to create a reliable desktop hardware unit capable of pulling real-time
+            environmental data over network sockets while maintaining a completely interactive, lag-free UI on a
+            hardware bus. Instead of relying on a pre-built commercial device, I handled everything from the core
+            software runtime down to the manual GPIO pinout configurations.
+          </p>
+        </section>
+
+        <!-- Section 2: Software Architecture -->
+        <section class="mb-5">
+          <h2 class="h3 fw-bold mb-3 text-primary">Software Architecture & API Resilience</h2>
+          <p>
+            Operating directly on an ESP32 microcontroller meant designing code with optimization in mind. To ensure
+            stable runtime behavior, I implemented the following software solutions:
+          </p>
+          <ul>
+            <li><strong>Failsafe API Rotation:</strong> Real-time clocks and weather systems are prone to network
+              request blocks if rate limits are exceeded. I engineered a request-pooling abstraction that dynamically
+              alternates between endpoints, protecting against application hangs and IP rate limits.</li>
+            <li><strong>Display Rendering Framework:</strong> Designed screen elements using the Lopaka wireframe
+              environment and realized the physical layout using the <code>TFT_eSPI</code> library. Frame structures
+              were configured to execute over parallel pipelines to eliminate display tearing and flashing.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3: Open Source Impact -->
+        <section class="mb-5 p-4 bg-secondary bg-opacity-10 border border-secondary rounded">
+          <h2 class="h4 fw-bold mb-2 text-success">★ Upstream Open-Source Contribution</h2>
+          <p class="mb-0">
+            While building out the display stack, I encountered a critical low-level processor compatibility issue
+            within the core library infrastructure. Instead of finding a temporary workaround, I isolated the issue in
+            the repository source code, patched the compatibility mismatch, and submitted a formal pull request directly
+            to <strong><code>TFT_eSPI</code></strong> (an open-source project with over 4.8k GitHub stars).
+          </p>
+        </section>
+
+        <!-- Section 4: Hardware Assembly -->
+        <section class="my-5">
+          <h2 class="h3 fw-bold mb-3 text-primary">Hardware Configuration</h2>
+          <p>
+            The physical infrastructure relies on explicit component grouping to manage high-efficiency inputs and
+            visual output streams without degrading internal module performance.
+          </p>
+          <div class="table-responsive">
+            <table class="table table-dark table-striped border-secondary">
+              <thead>
+                <tr>
+                  <th scope="col">Component</th>
+                  <th scope="col">Interface Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>ESP32D Module</strong></td>
+                  <td>Primary SoC processor handling computational logic and Wi-Fi stack connection.</td>
+                </tr>
+                <tr>
+                  <td><strong>8-Bit Bus Parallel LCD Screen</strong></td>
+                  <td>Mapped manually across precise GPIO pins to sustain higher frame-rate outputs.</td>
+                </tr>
+                <tr>
+                  <td><strong>Active Buzzer</strong></td>
+                  <td>Integrated for immediate physical sound processing, with hardware updates underway for dynamic
+                    audio.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 5: Direct Source Links -->
+        <section class="my-5 p-5 bg-dark border border-secondary text-center rounded shadow-lg">
+          <h2 class="h4 fw-bold mb-3 text-white">Examine the Codebase</h2>
+          <p class="text-secondary mb-4">The entire codebase, hardware logs, and structural design updates are fully
+            documented and open for review on GitHub.</p>
+          <a href="https://github.com/abdelrahmane7200/sep11-freedom-project" target="_blank"
+            class="btn btn-primary btn-lg px-4">
+            Explore GitHub Repository
+          </a>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 mt-5 border-top border-secondary">
+    <div class="container text-center small text-secondary">
+      <span>© <span id="year"></span> Abdel Ebed · Built with Bootstrap</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script>
+    // Keeping the copyright year dynamic on the subpage as well
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
