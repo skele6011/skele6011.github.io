@@ -84,57 +84,50 @@
         </div>
 
         <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
+          <!-- Project 1: Smart Alarm Clock -->
+          <div class="col-md-6 col-lg-6">
             <article class="card h-100 project-card">
-              <div class="project-thumb thumb-1"></div>
               <div class="card-body">
-                <h3 class="h5 card-title">Project Name One</h3>
-                <p class="card-text">A short summary of the goal, what it does, and why it matters.</p>
+                <span class="badge text-bg-primary mb-2">Embedded Systems & C++</span>
+                <h3 class="h5 card-title">IoT Smart Alarm Clock (MVP)</h3>
+                <p class="card-text">An internet-connected hardware device built using an ESP32 micro-module. It handles
+                  real-time clock syncing and dynamic display mechanics through code designed for hardware efficiency.
+                </p>
                 <ul class="project-meta">
-                  <li>Parts: microcontroller, sensors, power stage</li>
-                  <li>Result: measurable improvement or demo outcome</li>
+                  <li><strong>Architecture:</strong> Dual-weather API rotation to bypass rate-limiting blocks.</li>
+                  <li><strong>Hardware:</strong> Wired an 8-bit parallel LCD screen and active buzzer using custom GPIO
+                    configuration.</li>
                 </ul>
               </div>
               <div class="card-footer bg-transparent border-0 pt-0">
-                <a href="#" class="stretched-link text-decoration-none">Read case study</a>
+                <a href="https://github.com/abdelrahmane7200/sep11-freedom-project" target="_blank"
+                  class="stretched-link text-decoration-none">View Codebase & Architecture →</a>
               </div>
             </article>
           </div>
 
-          <div class="col-md-6 col-lg-4">
+          <!-- Project 2: CLI Open Source Work -->
+          <div class="col-md-6 col-lg-6">
             <article class="card h-100 project-card">
-              <div class="project-thumb thumb-2"></div>
               <div class="card-body">
-                <h3 class="h5 card-title">Project Name Two</h3>
-                <p class="card-text">Explain the challenge, the approach, and any design tradeoffs you made.</p>
+                <span class="badge text-bg-success mb-2">Developer Tools & Javascript</span>
+                <h3 class="h5 card-title">JS CLI Tooling & Open-Source Patching</h3>
+                <p class="card-text">Demonstrated rapid adaptation to foreign codebases by maintaining and optimizing
+                  developer workflows for engineering educators.</p>
                 <ul class="project-meta">
-                  <li>Focus: mechanical design, PCB, or firmware</li>
-                  <li>Media: photos, video, schematic, code</li>
+                  <li><strong>Feature Launch:</strong> Engineered a custom <code>:copyhistory</code> feature for a JS
+                    CLI project to streamline high-volume grading protocols.</li>
+                  <li><strong>Upstream Contribution:</strong> Submitted a core processor compatibility patch to the
+                    major <code>TFT_eSPI</code> library (4.8k GitHub Stars).</li>
                 </ul>
               </div>
               <div class="card-footer bg-transparent border-0 pt-0">
-                <a href="#" class="stretched-link text-decoration-none">Read case study</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <article class="card h-100 project-card">
-              <div class="project-thumb thumb-3"></div>
-              <div class="card-body">
-                <h3 class="h5 card-title">Project Name Three</h3>
-                <p class="card-text">Use this for a bigger project with a polished explanation and good visuals.</p>
-                <ul class="project-meta">
-                  <li>Focus: testing, automation, or embedded UI</li>
-                  <li>Outcome: what you learned and built next</li>
-                </ul>
-              </div>
-              <div class="card-footer bg-transparent border-0 pt-0">
-                <a href="#" class="stretched-link text-decoration-none">Read case study</a>
+                <span class="text-secondary small">Internal & Upstream Pull-Requests</span>
               </div>
             </article>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -155,15 +148,26 @@
             <div class="timeline">
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <h3 class="h5 mb-1">Role or activity name</h3>
-                <p class="text-secondary mb-1">Organization · 2025–2026</p>
-                <p class="mb-0">A few lines about what you built, improved, or contributed.</p>
+                <h3 class="h5 mb-1">Student Leader / Technical Peer Coach</h3>
+                <p class="text-secondary mb-1">Software Engineering Program · 2025–2026</p>
+                <p class="mb-0">Pivoted advanced personal curriculum benchmarks toward collaborative team leadership.
+                  Mentored peers through complex algorithmic concepts, syntax strategies (e.g., destructuring
+                  assignments), and programmatic debugging structures.</p>
               </div>
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <h3 class="h5 mb-1">Another role or activity</h3>
-                <p class="text-secondary mb-1">Organization · 2024–2025</p>
-                <p class="mb-0">Add impact, scope, and any tools or methods you used.</p>
+                <h3 class="h5 mb-1">Student Leader — Immigration Town Hall</h3>
+                <p class="text-secondary mb-1">Logistics & Strategy · 2026</p>
+                <p class="mb-0">Co-led cross-functional coordination with school administration. Managed cross-club
+                  communications, resource delegation, and strategic timelines between student operations and staff
+                  members.</p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3 class="h5 mb-1">Finance Intern</h3>
+                <p class="text-secondary mb-1">Lazard Program · Summer 2025</p>
+                <p class="mb-0">Selected as one of 36 high-performing students for market research training. Developed
+                  and pitched a mock target acquisition data analysis model to corporate judges.</p>
               </div>
             </div>
           </div>
@@ -181,23 +185,27 @@
         <div class="row g-4">
           <div class="col-md-4">
             <div class="info-card h-100 p-4">
-              <h3 class="h5">Build</h3>
-              <p class="mb-0">CAD, soldering, enclosures, prototyping, and general fabrication workflow.</p>
+              <h3 class="h5">Embedded & Hardware</h3>
+              <p class="mb-0">ESP32 Modules, Microcontroller Assembly, GPIO Pinout Mapping, 8-Bit Bus Parallel LCD
+                Interfaces, Active Buzzers, IoT Testing Protocols.</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="info-card h-100 p-4">
-              <h3 class="h5">Electronics</h3>
-              <p class="mb-0">Sensors, power, microcontrollers, debugging, and test equipment.</p>
+              <h3 class="h5">Software & Scripting</h3>
+              <p class="mb-0">C++, C#, Python, JavaScript (ES6+), Java, Arduino (INO), HTML5/CSS3, Object-Oriented
+                Logic.</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="info-card h-100 p-4">
-              <h3 class="h5">Software</h3>
-              <p class="mb-0">Firmware, scripts, documentation, and simple web dashboards when needed.</p>
+              <h3 class="h5">Tools & Translation</h3>
+              <p class="mb-0">Git/GitHub version control, API rate-limit debugging, Technical & Medical Emergency
+                Arabic-English Translation workflows.</p>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
