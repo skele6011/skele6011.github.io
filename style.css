@@ -1,0 +1,224 @@
+:root {
+  --page-bg: #0b1020;
+  --page-bg-soft: #11182d;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --text-soft: rgba(255, 255, 255, 0.72);
+  --accent: #7aa2ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(122, 162, 255, 0.18), transparent 34%),
+    linear-gradient(180deg, var(--page-bg) 0%, #090d18 100%);
+  color: #f5f7fb;
+}
+
+body::selection {
+  background: rgba(122, 162, 255, 0.35);
+}
+
+.portfolio-nav {
+  background: rgba(9, 13, 24, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.portfolio-nav .nav-link {
+  color: var(--text-soft);
+}
+
+.portfolio-nav .nav-link:hover,
+.portfolio-nav .nav-link.active {
+  color: #fff;
+}
+
+.hero-section {
+  padding-top: 5rem;
+}
+
+.section-pad {
+  padding: 5rem 0;
+}
+
+.section-muted {
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.section-kicker,
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hero-card,
+.info-card,
+.contact-card,
+.cta-box,
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 1.25rem;
+  color: inherit;
+  backdrop-filter: blur(14px);
+}
+
+.hero-card {
+  min-height: 320px;
+}
+
+.mini-stat {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mini-stat:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.mini-stat-number {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.mini-stat-label {
+  color: var(--text-soft);
+  margin-top: 0.35rem;
+}
+
+.text-bg-dark-soft {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-card {
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(122, 162, 255, 0.4);
+}
+
+.project-thumb {
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+}
+
+.thumb-1 {
+  background-image:
+    linear-gradient(135deg, rgba(122, 162, 255, 0.9), rgba(101, 216, 174, 0.7)),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.5), transparent 40%);
+}
+
+.thumb-2 {
+  background-image:
+    linear-gradient(135deg, rgba(255, 167, 104, 0.9), rgba(122, 162, 255, 0.7)),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.5), transparent 40%);
+}
+
+.thumb-3 {
+  background-image:
+    linear-gradient(135deg, rgba(176, 108, 255, 0.9), rgba(255, 122, 179, 0.7)),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.5), transparent 40%);
+}
+
+.card-title,
+h1,
+h2,
+h3 {
+  color: #fff;
+}
+
+.card-text,
+p,
+li {
+  color: var(--text-soft);
+}
+
+.project-meta {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -0.1rem;
+  top: 0.3rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 0.25rem rgba(122, 162, 255, 0.15);
+}
+
+.section-cta .cta-box {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-text {
+  max-width: 700px;
+}
+
+.contact-card {
+  min-height: 100%;
+}
+
+.btn-primary {
+  --bs-btn-bg: #7aa2ff;
+  --bs-btn-border-color: #7aa2ff;
+  --bs-btn-hover-bg: #5e8eff;
+  --bs-btn-hover-border-color: #5e8eff;
+  --bs-btn-color: #09101f;
+  --bs-btn-hover-color: #09101f;
+  font-weight: 700;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.btn-outline-light:hover {
+  background: #fff;
+  color: #09101f;
+}
+
+footer {
+  border-top: 1px solid var(--card-border);
+}
